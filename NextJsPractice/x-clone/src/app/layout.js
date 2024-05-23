@@ -20,7 +20,13 @@ export default function RootLayout({ children }) {
           </div>
           
           {children}
-          <News />
+
+          <div className="lg-flex lg:flex-col w-[24rem] hidden sm:block border-l h-screen p-3 ">
+            <div className="sticky-top-0">
+              <input type="text" placeholder="Search" className="bg-gray-100 border border-gray-200 rounded-3xl text-sm w-full px-4 py-2" />
+            </div>
+            <News />
+          </div>
         </div>
       </body>
     </html>
