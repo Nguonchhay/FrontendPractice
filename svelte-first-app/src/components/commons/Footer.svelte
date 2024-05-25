@@ -10,35 +10,35 @@
                 <div class="social-links">
                   <ul class="d-flex list-unstyled">
                     <li>
-                      <a href="#">
+                      <a href="#0">
                         <svg class="facebook">
                           <use xlink:href="#facebook" />
                         </svg>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="#0">
                         <svg class="instagram">
                           <use xlink:href="#instagram" />
                         </svg>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="#0">
                         <svg class="twitter">
                           <use xlink:href="#twitter" />
                         </svg>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="#0">
                         <svg class="linkedin">
                           <use xlink:href="#linkedin" />
                         </svg>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="#0">
                         <svg class="youtube">
                           <use xlink:href="#youtube" />
                         </svg>
@@ -53,19 +53,19 @@
                 <h5 class="widget-title pb-2">Quick Links</h5>
                 <ul class="menu-list list-unstyled text-uppercase">
                   <li class="menu-item pb-2">
-                    <a href="#">Home</a>
+                    <a href="#0">Home</a>
                   </li>
                   <li class="menu-item pb-2">
-                    <a href="#">About</a>
+                    <a href="#0">About</a>
                   </li>
                   <li class="menu-item pb-2">
-                    <a href="#">Shop</a>
+                    <a href="#0">Shop</a>
                   </li>
                   <li class="menu-item pb-2">
-                    <a href="#">Blogs</a>
+                    <a href="#0">Blogs</a>
                   </li>
                   <li class="menu-item pb-2">
-                    <a href="#">Contact</a>
+                    <a href="#0">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -75,19 +75,19 @@
                 <h5 class="widget-title pb-2">Help & Info Help</h5>
                 <ul class="menu-list list-unstyled">
                   <li class="menu-item pb-2">
-                    <a href="#">Track Your Order</a>
+                    <a href="#0">Track Your Order</a>
                   </li>
                   <li class="menu-item pb-2">
-                    <a href="#">Returns Policies</a>
+                    <a href="#0">Returns Policies</a>
                   </li>
                   <li class="menu-item pb-2">
-                    <a href="#">Shipping + Delivery</a>
+                    <a href="#0">Shipping + Delivery</a>
                   </li>
                   <li class="menu-item pb-2">
-                    <a href="#">Contact Us</a>
+                    <a href="#0">Contact Us</a>
                   </li>
                   <li class="menu-item pb-2">
-                    <a href="#">Faqs</a>
+                    <a href="#0">Faqs</a>
                   </li>
                 </ul>
               </div>
@@ -97,7 +97,7 @@
                 <h5 class="widget-title text-uppercase pb-2">Contact Us</h5>
                 <p>Do you have any queries or suggestions? <a href="mailto:">yourinfo@gmail.com</a>
                 </p>
-                <p>If you need support? Just give us a call. <a href="">+55 111 222 333 44</a>
+                <p>If you need support? Just give us a call. <a href="#0">+55 111 222 333 44</a>
                 </p>
               </div>
             </div>
