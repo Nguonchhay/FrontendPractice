@@ -7,7 +7,7 @@ export default function ClientPage() {
     const [todos, setToDos] = useState([]);
 
     const fetchToDos = () => {
-        fetch('https://coding-fairy.com/api/mock-api-resources/1715945679/todos', {
+        fetch('https://jsonplaceholder.typicode.com/todos', {
             headers: {
               'Content-Type': 'application/json',
               'Accept': 'application/json'
@@ -23,7 +23,7 @@ export default function ClientPage() {
 
     useEffect(() => {
         fetchToDos();
-    }, [fetchToDos]);
+    }, []);
 
     return (
         <div className="py-5 px-5">
@@ -31,7 +31,7 @@ export default function ClientPage() {
             <ol>
                 {
                 todos.length && todos.map((item: any, index: number) => (
-                    <li key={index}>{item.title}</li>
+                    <li key={index}>{index + 1}. {item.title}</li>
                 ))
                 }
             </ol>
