@@ -1,6 +1,6 @@
 
 const fetchToDos = async () => {
-    const res = await fetch('http://localhost:3000/api/todos');
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/todos`);
       if (!res.ok) {
         throw new Error('Fetch data from own API is error');
       }

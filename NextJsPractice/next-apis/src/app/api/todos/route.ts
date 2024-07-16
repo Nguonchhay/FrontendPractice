@@ -10,3 +10,12 @@ export async function GET(req: Request) {
         }
     ]);
 }
+
+export async function POST(req: Request) {
+    return await Response.json([
+        {
+            id: 1,
+            title: 'Task 1'
+        }
+    ]);
+}
