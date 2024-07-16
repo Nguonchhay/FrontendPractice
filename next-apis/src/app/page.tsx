@@ -1,6 +1,10 @@
 
 const fetchToDos = async () => {
-  const res = await fetch('https://coding-fairy.com/api/mock-api-resources/1715945679/todos');
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos', {
+    headers: {
+      'Authorization': `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`
+    }
+  });
   if (!res.ok) {
     throw new Error('Fetch data from server component is error');
   }
@@ -10,7 +14,8 @@ const fetchToDos = async () => {
 
 
 export default async function Home() {
-  const todos = await fetchToDos();
+  let todos = await fetchToDos();
+  todos = todos.slice(1, 3);
 
   return (
     <div className="py-5 px-5">

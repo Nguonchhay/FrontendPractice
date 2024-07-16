@@ -10,14 +10,14 @@ export default function ClientPage() {
         fetch('https://jsonplaceholder.typicode.com/todos', {
             headers: {
               'Content-Type': 'application/json',
-              'Accept': 'application/json'
+              'Accept': 'application/json',
+              'Authorization': `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`
             },
             method: 'GET'
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
-            setToDos(data);
+            setToDos(data.slice(1, 5));
         });
     }
 
