@@ -30,6 +30,9 @@ export default function RootLayout({
           <li>
             <Link href="/clients/actions">3. Client component with actions.ts</Link>
           </li>
+          <li>
+            <Link href="/own-apis">4. Own API</Link>
+          </li>
         </ul>
         {children}
       </body>
