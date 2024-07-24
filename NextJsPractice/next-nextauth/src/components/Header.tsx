@@ -1,19 +1,7 @@
-import { auth, signOut } from "@/auth";
+import { auth } from "@/services/AuthService";
 import Image from 'next/image';
 import Link from 'next/link';
-
-function SignOut() {
-  return (
-    <form
-      action={async () => {
-        'use server';
-        await signOut();
-      }}
-    >
-      <button type="submit">Sign out</button>
-    </form>
-  );
-}
+import LogoutForm from "./Forms/LogoutForm";
 
 export const Header = async () => {
   const session = await auth();
@@ -43,24 +31,29 @@ export const Header = async () => {
                   )
                 }
               </li>
-              <li className="px-2">
-                {
-                session?.user && (
-                  <div>
-                    {
-                      session.user.name && session.user.image &&
-                      <Image
-                        src={session.user.image}
-                        alt={session.user.name}
-                        width={32}
-                        height={32}
-                      />
-                    }
-                    <SignOut />
-                  </div>
-                  )
-                }
-              </li>
+              
+              {
+                session?.user && (<>
+                  <li>
+                    <Link href="/profile">Profile</Link>
+                  </li>
+                  <li className="px-2">
+                    <div>
+                      {
+                        session.user.name && session.user.image &&
+                        <Image
+                          src={session.user.image}
+                          alt={session.user.name}
+                          width={32}
+                          height={32}
+                        />
+                      }
+                      <LogoutForm />
+                    </div>
+                  </li>
+                </>)
+              }
+             
             </ul>
           </div>
         </div>

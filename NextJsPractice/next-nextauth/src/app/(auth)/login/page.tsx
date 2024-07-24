@@ -1,4 +1,5 @@
 import LoginForm from "@/components/Forms/LoginForm";
+import Link from "next/link";
  
 export default async function LoginPage() {
 
@@ -11,6 +12,8 @@ export default async function LoginPage() {
           </div>
         </div>
         <LoginForm />
+
+        <Link href="/">Back to home page</Link>
       </div>
     </div>
   );
