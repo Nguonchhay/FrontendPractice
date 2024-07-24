@@ -31,7 +31,6 @@ export const Header = async () => {
                   )
                 }
               </li>
-              
               {
                 session?.user && (<>
                   <li>
@@ -53,7 +52,6 @@ export const Header = async () => {
                   </li>
                 </>)
               }
-             
             </ul>
           </div>
         </div>
