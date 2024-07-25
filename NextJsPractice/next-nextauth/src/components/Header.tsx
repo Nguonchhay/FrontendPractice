@@ -39,13 +39,16 @@ export const Header = async () => {
                   <li className="px-2">
                     <div>
                       {
-                        session.user.name && session.user.image &&
-                        <Image
-                          src={session.user.image}
-                          alt={session.user.name}
-                          width={32}
-                          height={32}
-                        />
+                        session.user.image ? (
+                          <Image
+                            src={session.user.image}
+                            alt=""
+                            width={32}
+                            height={32}
+                          />
+                        ) : (
+                          <span>{session.user.name}</span>
+                        )
                       }
                       <LogoutForm />
                     </div>

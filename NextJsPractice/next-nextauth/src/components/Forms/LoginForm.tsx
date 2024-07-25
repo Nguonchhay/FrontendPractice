@@ -1,26 +1,34 @@
 "use client";
 
+import { useState } from "react";
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { signInByCredentials } from "@/app/actions";
+
 
 export default function LoginForm() {
+    const router = useRouter();
+    const [error, setError] = useState('');
+    const [isAuth, setIsAuth] = useState(false);
+    const [loading, setLoading] = useState(false);
 
-    const onSignIn = () => {
-        console.log('Processing...');
+    const onGoogleSignIn = () => {
         signIn('google');
     }
 
-    const onSubmit = (formData: FormData) => {
-        // 'use server';
-        const rawData = {
-            email: formData.get('email'),
-            password: formData.get('password')
-        };
-        console.log('onSubmit', rawData);
+    const onSubmit = async (formData: FormData) => {
+        const res = await signInByCredentials(formData);
+        setError(res.message);
+        if (res.ok) {
+            router.push('/');
+        }
     }
 
     return (
         <div>
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                <h2 className="text-red-700 text-center">{error}</h2>
+                
                 <form className="space-y-6" action={onSubmit} method="POST">
                     <div>
                         <label
@@ -82,7 +90,7 @@ export default function LoginForm() {
                 </form>
 
                 <p className="mt-10 text-center text-sm text-gray-500">
-                    <button onClick={onSignIn} className="button bg-slate-400 p-1 rounded">
+                    <button onClick={onGoogleSignIn} className="button bg-slate-400 p-1 rounded">
                         Google Sing In
                     </button>
                 </p>
