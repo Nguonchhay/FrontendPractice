@@ -25,6 +25,9 @@ export default function RootLayout({
               <li>
                 <Link href="/">MySQL</Link>
               </li>
+              <li>
+                <Link href="/firebase">Firebase</Link>
+              </li>
             </ul>
           </div>
           {children}
